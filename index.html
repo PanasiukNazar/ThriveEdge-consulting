@@ -41,8 +41,9 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
-		
+
     </head>
+
     <body>
 	
 		<!-- Preloader -->
@@ -545,7 +546,8 @@
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
 									<div class="form-group">
-										<input name="email" type="email" placeholder="Email">
+										<input id="email" name="email" type="email" placeholder="Email">
+                                        <div style="color: red;" id="result"></div>
 									</div>
 								</div>
 								<div class="col-lg-6 col-md-6 col-12">
@@ -563,7 +565,7 @@
 								<div class="col-lg-5 col-md-4 col-12">
 									<div class="form-group">
 										<div class="button">
-											<button type="submit" class="btn">Send</button>
+											<button onclick="sendForm()" id="submit" type="submit" class="btn">Send</button>
 										</div>
 									</div>
 								</div>
@@ -572,7 +574,7 @@
 					</div>
 					<div class="col-lg-6 col-md-12 ">
 						<div class="appointment-image">
-							<img src="img/contact-img.png" alt="#">
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28321.038710897326!2d151.1851799333685!3d-33.86748695634864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae8f2a2b21f1%3A0x500eef17f20c670!2sSydney%2C%20New%20South%20Wales%2C%20Australia!5e0!3m2!1sen!2snp!4v1604921178092!5m2!1sen!2snp" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 						</div>
 					</div>
 				</div>
@@ -601,8 +603,8 @@
 											<li><a href="index.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Home</a></li>
 											<li><a href="#about"><i class="fa fa-caret-right" aria-hidden="true"></i>About Us</a></li>
 											<li><a href="#services"><i class="fa fa-caret-right" aria-hidden="true"></i>Services</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Privacy</a></li>
-											<li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i>Terms of use</a></li>	
+											<li><a href="privacy-policy.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Privacy</a></li>
+											<li><a href="terms-of-use.html"><i class="fa fa-caret-right" aria-hidden="true"></i>Terms</a></li>	
 										</ul>
 									</div>
 								</div>
@@ -620,13 +622,8 @@
 						</div>
 						<div class="col-lg-3 col-md-6 col-12">
 							<div class="single-footer">
-								<h2>Newsletter</h2>
-								<p>subscribe to our newsletter to get allour news in your inbox.. Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="email" placeholder="Email Address" class="common-input" onfocus="this.placeholder = ''"
-										onblur="this.placeholder = 'Your email address'" required="" type="email">
-									<button class="button"><i class="icofont icofont-paper-plane"></i></button>
-								</form>
+								<h2>News</h2>
+								<p>In a groundbreaking development, a pioneering consulting firm has emerged, reshaping the landscape of financial planning.</p>
 							</div>
 						</div>
 					</div>
@@ -635,7 +632,25 @@
 			<!--/ End Footer Top -->
 		</footer>
 		<!--/ End Footer Area -->
-		
+
+        <!-- Cookie banner -->
+        <div class="cookie-wrapper show">
+            <header>
+                <i class="bx bx-cookie"></i>
+                <h2>Cookie Consent</h2>
+            </header>
+
+            <div class="data">
+                <p>This website uses cookies to help you have a superior and more relevant browsing experience on the website.<a href="#">Read more...</a></p>
+            </div>
+
+            <div class="buttons">
+                <button class="btn cookie-button" id="acceptBtn">Accept</button>
+                <button class="btn primary cookie-button" id="declineBtn">Decline</button>
+            </div>
+        </div>
+        <!-- End Cookie banner -->  
+
 		<!-- jquery Min JS -->
         <script src="js/jquery.min.js"></script>
 		<!-- jquery Migrate JS -->
@@ -676,5 +691,9 @@
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Main JS -->
 		<script src="js/main.js"></script>
+        <!-- Contact form JS -->
+		<script src="js/contact-form.js"></script>
+        <!-- Cookie banner JS -->
+        <script src="js/cookiebanner.js"></script>
     </body>
 </html>

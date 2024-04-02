@@ -310,6 +310,7 @@ body{
 .header .logo {
 	float: left;
 	margin-top: 18px;
+    width: 200px;
 }
 .header .navbar {
 	background: none;
@@ -4170,3 +4171,47 @@ body{
 /*=========================
 	End Footer CSS
 ===========================*/
+
+/* Cookie banner */
+
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.cookie-wrapper {
+  position: fixed;
+  bottom: 50px;
+  right: 30px;
+  max-width: 345px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px 25px 22px;
+  transition: right 0.3s ease;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+.cookie-wrapper .show {
+  right: 20px;
+}
+
+.hidden {
+    display: none;
+}
+header i {
+  color: #1A76D1;
+  font-size: 32px;
+}
+header h2 {
+  color: #1A76D1;
+  font-weight: 500;
+}
+.data p a {
+  color: #1A76D1;
+  text-decoration: none;
+}
+.data p a:hover {
+  text-decoration: underline;
+}
+.buttons {
+    padding: 20px 0px;
+}
